@@ -14,5 +14,4 @@ jobs:
           npm -v
       - name: get location
         run: |
-          pwd
           ls
