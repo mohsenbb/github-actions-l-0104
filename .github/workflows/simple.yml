@@ -7,25 +7,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
+        run: echo "hello world"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
+          pwd
+      - name: python command processor
+        shell: python
+        run: |
+          import platform 
+          print(platform.processor())
+  
+  run-shell-command-2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string2
         run: echo "hello world2"
       - name: multiline script
         run: |
           node -v
           npm -v
           pwd
-      - name: python command
+      - name: python command system
         shell: python
         run: |
           import platform 
-          print(platform.processor())
-  
-  run-windows-command:
-    runs-on: windows-latest
-    steps:
-      - name: Directory PowerShell
-        run: |
-          Get-Location
-          dir
-      - name: Directory Bash
-        run: pwd
-        shell: bash
+          print(platform.system())
