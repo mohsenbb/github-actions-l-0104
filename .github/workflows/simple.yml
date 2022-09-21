@@ -14,6 +14,7 @@ jobs:
           npm -v
           pwd
       - name: python command
+        shell: python
         run: |
           import platform 
           print(platform.processor())
