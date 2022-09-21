@@ -12,8 +12,7 @@ jobs:
         run: |
           node -v
           npm -v
-      - name: python command
+      - name: get location
         run: |
-          import platform
-          print(platform.processor())
-        shell: python
+          pwd
+          ls
