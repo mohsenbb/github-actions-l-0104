@@ -6,6 +6,9 @@ jobs:
   dump_contexts_to_log:
     runs-on: ubuntu-latest
     steps:
+      - name: Print github
+        run: |
+          echo $github.event_name
       - name: Dump GitHub context
         id: github_context_step
         run: echo '${{ toJSON(github) }}'
