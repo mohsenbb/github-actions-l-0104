@@ -10,8 +10,8 @@ jobs:
         env:
           GCon: ${{ toJson(github) }}
         run: |
-          echo "1. {{ toJson(github) }}"
-          echo "2. $GC"
+          echo "1. ${{ toJson(github) }}"
+          echo "2. $GCon"
       - name: Dump GitHub context
         id: github_context_step
         run: echo '${{ toJSON(github) }}'
