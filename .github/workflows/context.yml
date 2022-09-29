@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Print github
         run: |
-          echo $github.event_name
+          echo "1. ${{ github.event_name }}"
       - name: Dump GitHub context
         id: github_context_step
         run: echo '${{ toJSON(github) }}'
